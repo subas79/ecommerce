@@ -151,6 +151,11 @@ cookie@0.5.0:
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
 
+cryptojs@^2.5.3:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/cryptojs/-/cryptojs-2.5.3.tgz#909547ecf15bac456e275459b39f2ef45d7fcbb9"
+  integrity sha512-+rdPl1UCxE8s3R94NNn+zMKOiI4MJ7dyh3X0c5uBL3btDr4zQ6acd7f9mY7Wb5MrccZEi2Rrha3OEtLcc5XXog==
+
 debug@2.6.9:
   version "2.6.9"
   resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
