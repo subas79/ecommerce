@@ -6,10 +6,6 @@ const authRoute = require("./routes/auth")
 
 mongoose.connect("mongodb://0.0.0.0:27017/e-com").then(()=> console.log("db connection successful")).catch((err)=> console.log(err))
 
-// app.get("/api/test", ()=>{
-//     console.log('api successful')
-// })
-
 app.use(express.json())
 app.use('/api/auth', authRoute);
 app.use('/api/user', userRoute);
