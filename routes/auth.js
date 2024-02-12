@@ -25,9 +25,12 @@ router.post("/register", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     const user = await User.findOne({ userName: req.body.userName });
-    !user && res.status(401).json("wrong credentials!");
-    user.password !== req.body.password &&
-      res.status(401).json("wrong credential!");
+    if (!user) {
+      return res.status(401).json("wrong credentials!");
+    }
+    if (user.password !== req.body.password) {
+      return res.status(401).json("wrong credential!");
+    }
     const { password, ...other } = user._doc;
 
     const accessToken = jwt.sign(
@@ -39,9 +42,9 @@ router.post("/login", async (req, res) => {
       { expiresIn: "3d" }
     );
 
-    res.status(200).json({ ...other, accessToken });
+    return res.status(200).json({ ...other, accessToken });
   } catch (err) {
-    res.status(500).json(err);
+    return res.status(500).json(err);
   }
 });
 
